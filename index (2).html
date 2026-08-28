@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alejandra Velosa Quete — Marketing Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --paper-2:#F5F4F1;
+    --ink:#141414;
+    --ink-2:#262420;
+    --muted:#6E6A62;
+    --gold:#D4A62A;
+    --gold-dark:#B3861B;
+    --line: rgba(20,20,20,0.12);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Manrope', sans-serif; font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces', serif; margin:0; letter-spacing:-0.01em;}
+  p{margin:0;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+
+  .en{display:none;}
+  body.lang-en .es{display:none;}
+  body.lang-en .en{display:inline;}
+  body.lang-en .en-block{display:block;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.94); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:18px 32px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand-name{font-family:'Fraunces',serif; font-weight:600; font-size:18px; letter-spacing:0.01em;}
+  .nav-links{display:flex; gap:26px; font-size:13.5px; font-weight:700;}
+  .nav-links a{opacity:0.75; transition:opacity .2s; text-transform:uppercase; letter-spacing:0.03em;}
+  .nav-links a:hover{opacity:1; color:var(--gold-dark);}
+  .lang-toggle{
+    display:flex; border:1.5px solid var(--ink); border-radius:20px; overflow:hidden;
+    font-size:12px; font-weight:700; letter-spacing:0.03em; flex-shrink:0;
+  }
+  .lang-toggle button{
+    padding:6px 14px; background:transparent; border:none; cursor:pointer;
+    font-family:'Manrope',sans-serif; font-weight:700; color:var(--ink); font-size:12px;
+  }
+  .lang-toggle button.active{background:var(--ink); color:#fff;}
+  @media(max-width:900px){ .nav-links{display:none;} }
+
+  /* HERO */
+  .hero{position:relative; overflow:hidden; padding:100px 0 80px; border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-size:12px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold-dark); margin-bottom:18px; display:block;
+  }
+  .hero h1{font-size:clamp(38px,6vw,64px); font-weight:600; line-height:1.05; max-width:900px;}
+  .hero .role{
+    font-family:'Fraunces',serif; font-style:italic; font-weight:400;
+    font-size:clamp(20px,2.4vw,26px); color:var(--muted); margin-top:14px;
+  }
+  .hero-desc{max-width:640px; margin-top:24px; font-size:17px; line-height:1.65; color:#3a352c;}
+  .hero-ctas{display:flex; gap:12px; margin-top:36px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:3px;
+    font-size:13.5px; font-weight:700; letter-spacing:0.01em; transition:all .2s;
+  }
+  .btn-primary{background:var(--ink); color:#fff;}
+  .btn-primary:hover{background:var(--gold-dark);}
+  .btn-outline{border:1.5px solid var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:#fff;}
+
+  /* SECTION HEADERS */
+  .section{padding:86px 0;}
+  .section-alt{background:var(--paper-2);}
+  .section-head{max-width:700px; margin-bottom:50px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px); font-weight:600;}
+  .section-head .sub{margin-top:14px; font-size:16px; color:var(--muted); line-height:1.6;}
+  .divider{height:1px; background:var(--line); width:100%; margin:0;}
+
+  /* ABOUT */
+  .about-intro{font-size:18px; line-height:1.75; max-width:760px; color:#2a2620; margin-bottom:56px;}
+  .about-intro strong{color:var(--ink);}
+  .intl-grid{display:grid; grid-template-columns: 1fr 1.15fr; gap:56px; align-items:center;}
+  @media(max-width:900px){.intl-grid{grid-template-columns:1fr;}}
+  .intl-text .inner-eyebrow{font-family:'Fraunces',serif; font-style:italic; font-size:22px; margin-bottom:6px; color:var(--gold-dark);}
+  .intl-text .loc{font-size:13px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; display:block;}
+  .intl-text p{font-size:16px; line-height:1.7; margin-bottom:16px; color:#3a352c;}
+  .intl-imgs{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .intl-imgs img{border-radius:4px; object-fit:cover; height:230px; width:100%;}
+  .intl-imgs img:first-child{grid-row:span 2; height:100%;}
+
+  /* CASE BLOCK */
+  .case{border-radius:6px; overflow:hidden; margin-bottom:64px; border:1px solid var(--line);}
+  .case:last-child{margin-bottom:0;}
+  .case-band{padding:34px 40px; background:var(--ink); color:#fff;}
+  .case-band .tag{font-size:11px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:8px;}
+  .case-band h3{font-size:clamp(22px,3vw,30px); font-weight:600; color:#fff;}
+  .case-band .meta{margin-top:8px; font-size:13.5px; opacity:0.75; font-weight:500;}
+  .case-body{background:#fff; padding:40px;}
+  .case-desc{font-size:15.5px; line-height:1.7; color:#3a352c; max-width:800px; margin-bottom:30px;}
+
+  .block-title{font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold-dark); margin:36px 0 18px; padding-top:22px; border-top:1px solid var(--line);}
+  .block-title:first-child{margin-top:0; padding-top:0; border-top:none;}
+
+  .phase-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:26px;}
+  .phase h4{font-size:13.5px; font-weight:800; margin-bottom:10px; color:var(--ink);}
+  .phase ul{margin:0; padding-left:18px; font-size:14px; line-height:1.6; color:#4a4438;}
+  .phase ul li{margin-bottom:4px;}
+
+  .summary-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:22px; background:var(--paper-2); border-radius:6px; padding:26px 28px;}
+  .summary-item .k{font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold-dark); margin-bottom:6px;}
+  .summary-item .v{font-size:14.5px; line-height:1.55; color:#2a2620;}
+  .quote-line{
+    font-family:'Fraunces',serif; font-style:italic; font-size:19px; line-height:1.5;
+    border-left:3px solid var(--gold); padding-left:20px; margin:26px 0; color:#2a2620;
+  }
+
+  .pos-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px;}
+  .pos-item{border:1px solid var(--line); border-radius:6px; padding:20px 22px;}
+  .pos-item h4{font-size:14.5px; font-weight:700; margin-bottom:8px; color:var(--ink);}
+  .pos-item p{font-size:13.5px; line-height:1.6; color:#4a4438;}
+
+  .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:8px;}
+  .gallery img{border-radius:4px; height:170px; width:100%; object-fit:cover; border:1px solid var(--line);}
+  .gallery-caption{font-size:12px; color:var(--muted); margin-top:6px;}
+
+  .reel-links{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 6px;}
+  .reel-links a{
+    display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700;
+    border:1.5px solid var(--ink); border-radius:20px; padding:7px 14px; transition:all .2s;
+  }
+  .reel-links a:hover{background:var(--ink); color:#fff;}
+
+  .sub-case{margin-bottom:40px; padding-bottom:36px; border-bottom:1px solid var(--line);}
+  .sub-case:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+  .sub-case-head{display:flex; align-items:center; gap:12px; margin-bottom:14px; flex-wrap:wrap;}
+  .sub-case-head h4{font-size:19px; font-weight:600;}
+  .sub-tag{font-size:11px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; background:var(--ink); color:var(--gold); padding:4px 10px; border-radius:20px;}
+  .micro-title{font-size:13.5px; font-weight:700; margin:20px 0 8px; color:var(--ink);}
+
+  /* result band (events) */
+  .result-band{display:grid; grid-template-columns:1fr 1fr;}
+  @media(max-width:760px){.result-band{grid-template-columns:1fr;}}
+  .result-col{padding:30px 36px;}
+  .result-col h4{font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:14px; color:var(--gold);}
+  .result-col p, .result-col li{font-size:14.5px; line-height:1.65; color:#fff; opacity:0.95;}
+  .result-col ul{margin:0; padding-left:18px;}
+  .result-col ul li{margin-bottom:6px;}
+  .stat-row{display:flex; gap:28px; flex-wrap:wrap; margin-top:8px;}
+  .stat .num{font-family:'Fraunces',serif; font-size:32px; font-weight:600; color:var(--gold);}
+  .stat .label{font-size:12px; color:#fff; opacity:0.75; margin-top:2px;}
+
+  /* mini cases (freelance) */
+  .mini-cases{display:flex; flex-direction:column; gap:48px;}
+  .mini-case{display:grid; grid-template-columns:1.1fr 1.4fr; gap:36px; align-items:start;}
+  @media(max-width:840px){.mini-case{grid-template-columns:1fr;}}
+  .mini-tag{display:inline-block; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; padding:5px 12px; border-radius:20px; color:var(--gold); background:var(--ink); margin-bottom:14px;}
+  .mini-case h3{font-size:24px; font-weight:600; margin-bottom:10px;}
+  .mini-case .desc{font-size:15px; line-height:1.7; color:#3a352c; margin-bottom:14px;}
+  .mini-case ul{margin:0 0 14px; padding-left:18px; font-size:14px; line-height:1.7; color:#4a4438;}
+  .mini-gallery{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .mini-gallery img{border-radius:4px; height:150px; object-fit:cover; border:1px solid var(--line);}
+
+  .missing-note{
+    font-size:12.5px; color:var(--muted); font-style:italic; margin-top:10px;
+    border-left:2px solid var(--line); padding-left:10px;
+  }
+
+  /* FOOTER */
+  footer{background:var(--ink); color:#fff; padding:70px 0 40px;}
+  .foot-top{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px; margin-bottom:50px;}
+  footer h2{color:#fff; font-size:clamp(30px,4vw,46px); font-weight:600; max-width:560px;}
+  .foot-contacts{display:flex; flex-direction:column; gap:10px; font-size:15px;}
+  .foot-contacts a{opacity:0.85; transition:opacity .2s;}
+  .foot-contacts a:hover{opacity:1; color:var(--gold);}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,0.15); padding-top:24px; display:flex; justify-content:space-between; font-size:12.5px; opacity:0.6; flex-wrap:wrap; gap:10px;}
+
+  ::selection{background:var(--gold); color:var(--ink);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="brand-name">Alejandra Velosa</span>
+    <div class="nav-links">
+      <a href="#about"><span class="es">Sobre mí</span><span class="en">About Me</span></a>
+      <a href="#marca"><span class="es">Estrategias</span><span class="en">Marketing Strategies</span></a>
+      <a href="#contenido"><span class="es">Contenido</span><span class="en">Content Creation</span></a>
+      <a href="#eventos"><span class="es">Eventos</span><span class="en">Event Marketing</span></a>
+      <a href="#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a>
+    </div>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">MARKETING STRATEGIST</span>
+    <h1>Alejandra Velosa Quete</h1>
+    <p class="hero-desc">
+      <span class="es">Especialista en contenido y marketing de redes sociales con más de 3 años de experiencia construyendo presencia de marca en redes sociales — desde el concepto y el copywriting hasta la producción de video y contenido visual.</span>
+      <span class="en">Content and social media marketing specialist with 3+ years of experience building brand presence across social media, from concept and copywriting to visual/video production.</span>
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-outline" href="#about"><span class="es">Sobre mí</span><span class="en">About Me</span></a>
+      <a class="btn btn-outline" href="#marca"><span class="es">Estrategias de Marketing</span><span class="en">Marketing Strategies</span></a>
+      <a class="btn btn-outline" href="#contenido"><span class="es">Creación de Contenido</span><span class="en">Content Creation</span></a>
+      <a class="btn btn-outline" href="#eventos"><span class="es">Marketing de Eventos</span><span class="en">Event Marketing</span></a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/alejandra-velosa-quete-marketing-strategyst/" target="_blank">LinkedIn</a>
+      <a class="btn btn-primary" href="#contacto"><span class="es">Escríbeme</span><span class="en">Get in Touch</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT ME -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span class="es">Sobre mí</span><span class="en">About</span></span>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="intl-grid" style="margin-bottom:56px;">
+      <p class="about-intro" style="margin-bottom:0;">
+        <span class="es">Hola, soy <strong>Alejandra Velosa</strong>. Tengo <strong>más de 3 años de experiencia</strong> en creación de contenido y estrategia; transformo ideas de marca en contenido claro y atractivo que conecta con las audiencias. Ayudo a las empresas a comunicarse de forma más efectiva con sus clientes, construyendo conexiones más fuertes a través de la comunicación estratégica. También quiero contarte sobre mi experiencia reciente en Alemania.</span>
+        <span class="en">Hi, I'm <strong>Alejandra Velosa</strong>. I have <strong>more than 3 years of experience</strong> in content creation and strategy — I transform brand ideas into clear, engaging content that resonates with audiences. I help companies communicate more effectively with their customers, building stronger connections through strategic communication. I want to tell you also about my recent experience in Germany.</span>
+      </p>
+      <img src="img/about_me.jpg" alt="About me" style="border-radius:6px; width:100%; object-fit:cover;">
+    </div>
+
+    <div class="intl-grid">
+      <div class="intl-text">
+        <p class="inner-eyebrow"><span class="es">Experiencia internacional</span><span class="en">International experience</span></p>
+        <span class="loc">Hamburg, Germany</span>
+        <p>
+          <span class="es">En <strong>octubre de 2024</strong> me mudé a Hamburgo para cursar mi <strong>Maestría en Marketing Management</strong>. Fue un capítulo que marcó tanto mi crecimiento personal como profesional.</span>
+          <span class="en">In <strong>October 2024</strong>, I moved to Hamburg to begin my <strong>Master's in Marketing Management</strong>. It was a chapter that shaped both my personal and professional growth.</span>
+        </p>
+        <p>
+          <span class="es">Durante ese año me uní a <strong>ABOUT YOU</strong> como Working Student en el equipo de Onsite Content, un ecommerce de moda a escala corporativa. Fue un entorno de ritmo intenso que me retó y me abrió nuevas perspectivas sobre cómo opera el marketing digital en Europa.</span>
+          <span class="en">During that year I joined <strong>ABOUT YOU</strong> as a Working Student on the Onsite Content team, a fashion ecommerce company at corporate scale. It was a fast-paced environment that challenged me and opened my eyes to how digital marketing operates in Europe.</span>
+        </p>
+        <p>
+          <span class="es">En <strong>marzo de 2026</strong> completé mi maestría con una tesis centrada en el comportamiento digital de consumidores de ecommerce de moda — comparando patrones entre Europa y Colombia, usando análisis estadístico en R — un tema que conectó mi camino académico con los aprendizajes reales que obtuve en Hamburgo.</span>
+          <span class="en">In <strong>March 2026</strong>, I completed my Master's with a thesis focused on the digital behavior of fashion e-commerce consumers — comparing patterns between Europe and Colombia, using statistical analysis in R — a topic that connected my academic journey with the real-world insights I gained in Hamburg.</span>
+        </p>
+      </div>
+      <div class="intl-imgs">
+        <img src="https://cdn.gamma.app/suu9awuu3elslac/c7df7790a70a4c19a92853e987a989dc/original/Collage-veraniego-estilo-scrapbook-916-1.png" alt="Hamburg collage 1">
+        <img src="https://cdn.gamma.app/suu9awuu3elslac/0d14569229fb4d109531ec5a06f6163e/original/Collage-veraniego-estilo-scrapbook-916-5.png" alt="Hamburg collage 2">
+        <img src="https://cdn.gamma.app/suu9awuu3elslac/a51bdc1cd4b04ce4b35ada64184c9fc9/original/Collage-veraniego-estilo-scrapbook-916-3.png" alt="Hamburg collage 3">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING STRATEGIES -->
+<section class="section section-alt" id="marca">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span class="es">Proyectos</span><span class="en">Projects</span></span>
+      <h2>Marketing Strategies</h2>
+      <p class="sub">
+        <span class="es">Marca construida desde la investigación: análisis de mercado, posicionamiento, voz y sistema de contenido.</span>
+        <span class="en">Brand built from research: market analysis, positioning, voice, and content systems.</span>
+      </p>
+    </div>
+
+    <!-- DERMOANGEL -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag">Sango Lab</span>
+        <h3>DermoAngel</h3>
+        <p class="meta">Brand & Content Strategy</p>
+      </div>
+      <div class="case-body">
+
+        <p class="block-title">Work Process</p>
+        <div class="phase-grid">
+          <div class="phase">
+            <h4><span class="es">Fase Inicial</span><span class="en">Initial Phase</span></h4>
+            <ul>
+              <li><span class="es">Lectura del brief, análisis de la marca actual, auditoría de redes y sitio web</span><span class="en">Brief reading, current brand analysis, social media & website audit</span></li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h4><span class="es">Fase de Estrategia de Marca</span><span class="en">Brand Strategy Phase</span></h4>
+            <ul>
+              <li><span class="es">Análisis de mercado y competencia</span><span class="en">Market & competitor analysis</span></li>
+              <li><span class="es">Ventajas competitivas</span><span class="en">Competitive advantages</span></li>
+              <li><span class="es">Lenguaje y tono de comunicación</span><span class="en">Communication language & tone</span></li>
+              <li><span class="es">Insights sobre cómo DermoAngel resuelve los dolores del cliente</span><span class="en">Insights into how DermoAngel solves customer pain points</span></li>
+              <li><span class="es">Identidad visual</span><span class="en">Visual identity</span></li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h4><span class="es">Fase de Estrategia de Contenido</span><span class="en">Content Strategy Phase</span></h4>
+            <ul>
+              <li><span class="es">Pilares de contenido</span><span class="en">Content pillars</span></li>
+              <li>Moodboard</li>
+              <li><span class="es">Pauta fotográfica</span><span class="en">Photographic guidelines</span></li>
+              <li><span class="es">Frecuencia de publicación</span><span class="en">Publication frequency</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="block-title">Brand Strategy Summary</p>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <div class="k">Brand Voice</div>
+            <div class="v"><span class="es">Directa y experta, técnica-profesional, cálida y cercana</span><span class="en">Direct & Expert, Technical-Professional, Warm & Close</span></div>
+          </div>
+          <div class="summary-item">
+            <div class="k">Target</div>
+            <div class="v"><span class="es">Doctores y clínicas estéticas</span><span class="en">Doctors and aesthetic clinics</span></div>
+          </div>
+          <div class="summary-item">
+            <div class="k">Values</div>
+            <div class="v"><span class="es">Confianza, seguridad, limpieza, innovación, precisión médica</span><span class="en">Trust, security, cleanliness, innovation, medical precision</span></div>
+          </div>
+        </div>
+        <p class="quote-line">
+          <span class="es">"Posicionar la marca como colega y aliado, no solo como proveedor."</span>
+          <span class="en">"Position the brand as a colleague and ally, not just a vendor."</span>
+        </p>
+
+        <p class="block-title">Positioning</p>
+        <div class="pos-grid">
+          <div class="pos-item">
+            <h4><span class="es">Confianza y certificación</span><span class="en">Trust & Certification</span></h4>
+            <p><span class="es">Respaldo europeo + INVIMA. Construir confianza a través de respaldo europeo, INVIMA y otras certificaciones.</span><span class="en">European backing + INVIMA. Build confidence through European backing and INVIMA and other certifications.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Resultados naturales</span><span class="en">Natural Results</span></h4>
+            <p><span class="es">Posicionar la fórmula como efectiva, sutil y alineada con las expectativas estéticas.</span><span class="en">Position the formula as effective, subtle, and aligned with aesthetic expectations.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Riesgo de cambio de proveedor</span><span class="en">Supplier Change Risk</span></h4>
+            <p><span class="es">Reducir la duda presentando una alternativa confiable y clínicamente respaldada.</span><span class="en">Reduce hesitation by presenting a reliable, clinically grounded alternative.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Tecnología de vanguardia</span><span class="en">Cutting-Edge Technology</span></h4>
+            <p><span class="es">Comunicar innovación a través del microneedling tópico y activos avanzados.</span><span class="en">Communicate innovation through topical microneedling and advanced actives.</span></p>
+          </div>
+        </div>
+
+        <p class="block-title">Content Strategy</p>
+        <div class="pos-grid">
+          <div class="pos-item">
+            <h4><span class="es">Contenido médico y científico</span><span class="en">Medical & Scientific Content</span></h4>
+            <p><span class="es">Ilustraciones médicas, material institucional y contenido educativo.</span><span class="en">Medical illustrations, institutional material, and educational content.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Evidencia clínica</span><span class="en">Clinical Proof</span></h4>
+            <p><span class="es">Casos clínicos, fotos de antes/después, aplicación en vivo, testimonios de dermatólogos.</span><span class="en">Clinical cases, before/after photos, live application, dermatologist testimonials.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Producto y visibilidad de marca</span><span class="en">Product & Brand Visibility</span></h4>
+            <p><span class="es">Primeros planos, fotos hero de producto y piezas visuales que refuerzan el profesionalismo.</span><span class="en">Close-ups, product hero shots, and visual assets that reinforce professionalism.</span></p>
+          </div>
+        </div>
+
+        <p class="block-title"><span class="es">Enfoque de contenido visual</span><span class="en">Visual Content Approach</span></p>
+        <p class="case-desc" style="margin-bottom:8px;">
+          <span class="es">Un sistema de contenido equilibrado centrado en credibilidad, educación y presentación premium: ilustraciones médicas, casos clínicos, fotos de antes/después, aplicación en vivo, testimonios de dermatólogos, publicaciones educativas, primeros planos, fotos hero de producto, contenido institucional y material científico.</span>
+          <span class="en">A balanced content system centered on credibility, education, and premium presentation: medical illustrations, clinical cases, before/after photos, live application, dermatologist testimonials, educational posts, close-ups, product hero shots, institutional content, and scientific material.</span>
+        </p>
+
+        <p class="block-title"><span class="es">Moodboard Visual</span><span class="en">Visual Moodboard</span></p>
+        <p class="case-desc" style="margin-bottom:16px;">
+          <span class="es">Traduciendo la estrategia a lenguaje visual, para guiar la ejecución de contenido y la consistencia de marca.</span>
+          <span class="en">Translating strategy into visual language to guide content execution and brand consistency.</span>
+        </p>
+        <div class="gallery">
+          <img src="img/dermo_mood_2.jpg" alt="Dermoangel moodboard 2">
+          <img src="img/dermo_mood_3.jpg" alt="Dermoangel moodboard 3">
+          <img src="img/dermo_mood_5.jpg" alt="Dermoangel moodboard 5">
+          <img src="img/dermo_mood_6.jpg" alt="Dermoangel moodboard 6">
+          <img src="img/dermo_mood_8.jpg" alt="Dermoangel moodboard 8">
+        </div>
+        <p class="missing-note">
+          <span class="es">Nota: faltan las piezas 1, 4, 7, 9 y 10 del moodboard — súbelas cuando las tengas y las agrego.</span>
+          <span class="en">Note: pieces 1, 4, 7, 9, and 10 of the moodboard are still missing — upload them when ready and I'll add them.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- JHD -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag"><span class="es">Independiente</span><span class="en">Independent</span></span>
+        <h3>JHD Engineers</h3>
+        <p class="meta"><span class="es">Estrategia de marca desde cero</span><span class="en">Brand strategy from the ground up</span></p>
+      </div>
+      <div class="case-body">
+
+        <p class="block-title">Work Process</p>
+        <div class="phase-grid">
+          <div class="phase">
+            <h4><span class="es">Fase Inicial</span><span class="en">Initial Phase</span></h4>
+            <ul>
+              <li><span class="es">Análisis del estado actual y actividades de la empresa</span><span class="en">Analyze the company's current state and activities</span></li>
+              <li><span class="es">Definición de objetivos</span><span class="en">Set objectives</span></li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h4><span class="es">Fase de Estrategia de Marca</span><span class="en">Brand Strategy Phase</span></h4>
+            <ul>
+              <li><span class="es">Análisis de mercado y competencia</span><span class="en">Market and competitor analysis</span></li>
+              <li><span class="es">Análisis DOFA</span><span class="en">SWOT analysis</span></li>
+              <li><span class="es">Target y buyer persona</span><span class="en">Target and buyer persona creation</span></li>
+              <li><span class="es">Identidad visual, valores, tono de voz, slogan, posicionamiento</span><span class="en">Visual identity, values, tone of voice, slogan, positioning</span></li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h4><span class="es">Fase de Estrategia de Contenido</span><span class="en">Content Strategy Phase</span></h4>
+            <ul>
+              <li><span class="es">Desarrollo de pilares de contenido</span><span class="en">Content pillars development</span></li>
+              <li><span class="es">Canales de comunicación</span><span class="en">Communication channels</span></li>
+              <li><span class="es">Calendario de contenido</span><span class="en">Content calendar</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="block-title">Brand Identity</p>
+        <div class="gallery">
+          <img src="img/jhd_logo1.jpg" alt="JHD brand identity">
+          <img src="img/jhd_logo2.jpg" alt="JHD brand identity">
+        </div>
+
+        <div class="summary-grid" style="margin-top:28px;">
+          <div class="summary-item">
+            <div class="k"><span class="es">Arquetipo de marca</span><span class="en">Brand Archetype</span></div>
+            <div class="v"><strong>The Caregiver</strong><br><span class="es">Protector, compasivo, empático, confiable.</span><span class="en">Protective, compassionate, empathetic, trustworthy.</span></div>
+          </div>
+          <div class="summary-item">
+            <div class="k"><span class="es">Voz y tono de marca</span><span class="en">Brand Voice & Tone</span></div>
+            <div class="v"><span class="es">Cálida y accesible · Tranquilizadora y confiable · Enfocada en seguridad y bienestar · Comprometida y transparente</span><span class="en">Warm & Accessible · Reassuring & Reliable · Focused on Safety & Wellbeing · Committed & Transparent</span></div>
+          </div>
+        </div>
+        <p class="quote-line">
+          <span class="es">"Cuidamos lo que más importa: tu seguridad, tu entorno, y el futuro de nuestra comunidad."</span>
+          <span class="en">"We care for what matters most: your safety, your environment, and our community's future."</span>
+        </p>
+
+        <div class="pos-grid" style="margin-bottom:28px;">
+          <div class="pos-item">
+            <h4><span class="es">Posicionamiento estratégico</span><span class="en">Strategic Positioning</span></h4>
+            <p><span class="es">Experiencia y cumplimiento normativo · Eficiencia y calidad de servicio</span><span class="en">Experience & Regulatory Compliance · Efficiency & Quality Service</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Slogan de marca</span><span class="en">Brand Slogan</span></h4>
+            <p><em>"Sustainable Solutions. Innovation with Purpose."</em></p>
+          </div>
+        </div>
+
+        <p class="block-title"><span class="es">Pilares de contenido</span><span class="en">Content Pillars</span></p>
+        <div class="pos-grid">
+          <div class="pos-item">
+            <h4><span class="es">Autoridad y experiencia</span><span class="en">Authority & Experience</span></h4>
+            <p><span class="es">Casos de éxito, datos, normativas, proyectos de infraestructura.</span><span class="en">Success cases, data, regulations, infrastructure projects.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Educación y valor</span><span class="en">Education & Value</span></h4>
+            <p><span class="es">Guías rápidas, errores comunes, beneficios de la reforestación, casos de estudio, glosario ambiental.</span><span class="en">Quick guides, common mistakes, benefits of reforestation and tree planting, case studies, glossary of environmental terms.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Humanización y cultura</span><span class="en">Humanization & Culture</span></h4>
+            <p><span class="es">Detrás de cámaras, historias del equipo, logros, experiencias de campo, retos de ejecución.</span><span class="en">Behind-the-scenes, team stories, achievements, field experiences, execution challenges.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Sostenibilidad y tendencias</span><span class="en">Sustainability & Trends</span></h4>
+            <p><span class="es">Noticias del mercado, innovación en construcción sostenible, jardinería vertical, referentes globales.</span><span class="en">Market news, innovations in sustainable construction & vertical gardening, global references, expert opinions.</span></p>
+          </div>
+          <div class="pos-item">
+            <h4><span class="es">Servicios y soluciones</span><span class="en">Services & Solutions</span></h4>
+            <p><span class="es">Explicación de servicios, problema-solución, preguntas frecuentes, diferenciadores.</span><span class="en">Service explanations, problem-solution, FAQs, differentiators, team explaining work process.</span></p>
+          </div>
+        </div>
+
+        <p class="block-title">LinkedIn Corporate Profiles</p>
+        <div class="gallery">
+          <img src="img/jhd_linkedin1.jpg" alt="JHD LinkedIn corporate profile">
+          <img src="img/jhd_linkedin2.jpg" alt="JHD LinkedIn corporate profile">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTENT CREATION -->
+<section class="section" id="contenido">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span class="es">Proyectos</span><span class="en">Projects</span></span>
+      <h2>Content Creation</h2>
+      <p class="sub">
+        <span class="es">De la idea a la publicación: guion, copy, producción y edición para marcas de distintas industrias.</span>
+        <span class="en">From idea to publish: concept, copy, production and editing for brands across industries.</span>
+      </p>
+    </div>
+
+    <!-- SANGO LAB (with Sinclair inside) -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag">Sango Lab</span>
+        <h3>Sango Lab</h3>
+        <p class="meta"><span class="es">Creación de contenido para doctores y cirujanos</span><span class="en">Content creation for doctors and surgeons</span></p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">
+          <span class="es">Creación de contenido para doctores y cirujanos: desde la captura y producción del contenido hasta el copywriting y la edición.</span>
+          <span class="en">Content creation for doctors and surgeons: from content capture and production to copywriting and content editing.</span>
+        </p>
+        <div class="gallery" style="max-width:260px; margin-bottom:8px;">
+          <img src="img/sango_team.jpg" alt="Sango Lab Team">
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head">
+            <h4><span class="es">Cobertura de Evento para Redes — Congreso</span><span class="en">Event Coverage for Congress Social Media</span></h4>
+            <span class="sub-tag">SAPS Academy</span>
+          </div>
+          <div class="reel-links">
+            <a href="https://www.instagram.com/reel/DZtHkBURHYq/" target="_blank">▶ <span class="es">Ver reel</span><span class="en">View reel</span></a>
+          </div>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head">
+            <h4><span class="es">Contenido para Cirujanos y Doctores Estéticos</span><span class="en">Content for Surgeons and Aesthetic Doctors</span></h4>
+            <span class="sub-tag">Dra. Mónica</span>
+          </div>
+          <div class="reel-links">
+            <a href="https://www.instagram.com/reel/DZ8i4W5ip9D/" target="_blank">▶ Reel 1</a>
+            <a href="https://www.instagram.com/reel/DaF1SBRu9BM/" target="_blank">▶ Reel 2</a>
+          </div>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head">
+            <h4><span class="es">Cobertura de Cirugía Plástica y Resultados</span><span class="en">Plastic Surgery Coverage and Results</span></h4>
+          </div>
+          <div class="reel-links">
+            <a href="https://www.instagram.com/reel/DaF1SBRu9BM/" target="_blank">▶ <span class="es">Ver reel</span><span class="en">View reel</span></a>
+          </div>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head">
+            <h4><span class="es">Carruseles para Redes Sociales</span><span class="en">Carousels for Social Media</span></h4>
+          </div>
+          <div class="gallery">
+            <img src="img/carrusel_medico_1.jpg" alt="Carrusel médico 1">
+            <img src="img/carrusel_medico_2.jpg" alt="Carrusel médico 2">
+            <img src="img/carrusel_medico_4.jpg" alt="Carrusel médico 4">
+            <img src="img/carrusel_medico_5.jpg" alt="Carrusel médico 5">
+          </div>
+          <p class="missing-note">
+            <span class="es">Nota: falta la pieza 3 del carrusel — súbela cuando la tengas.</span>
+            <span class="en">Note: piece 3 of the carousel is still missing — upload it when ready.</span>
+          </p>
+        </div>
+
+        <!-- SINCLAIR INSIDE SANGO LAB -->
+        <div class="sub-case">
+          <div class="sub-case-head">
+            <h4><span class="es">Contenido para Sinclair por Sango Lab</span><span class="en">Content for Sinclair by Sango Lab</span></h4>
+          </div>
+
+          <p class="micro-title"><span class="es">Cobertura de Eventos & Masterclasses</span><span class="en">Event & Masterclass Coverage</span></p>
+          <p class="case-desc" style="margin-bottom:12px;">
+            <span class="es">Cobertura de eventos y masterclasses de Sinclair en distintas líneas de producto, incluyendo documentación en sitio, captura de contenido, y entregables listos para redes sociales.</span>
+            <span class="en">Coverage of Sinclair events and masterclasses across different product lines, including on-site documentation, content capture, and social media-ready outputs.</span>
+          </p>
+          <div class="reel-links">
+            <a href="https://www.instagram.com/reel/C8vE4hhuw1E/" target="_blank">▶ Masterclass Dra. Mecleine</a>
+            <a href="https://www.instagram.com/reel/C-k23_2x8LD/" target="_blank">▶ Cooltech Masterclass</a>
+            <a href="https://www.instagram.com/reel/C_A_L5sxnaE/" target="_blank">▶ Cooltech Masterclass 2</a>
+          </div>
+          <div class="gallery" style="margin-top:14px;">
+            <img src="img/sinclair_event1.jpg" alt="Sinclair event coverage">
+            <img src="img/sinclair_event2.jpg" alt="Sinclair event coverage">
+          </div>
+
+          <p class="micro-title"><span class="es">Piezas gráficas informativas para doctores</span><span class="en">Informative Graphic Pieces for Doctors</span></p>
+          <p class="case-desc" style="margin-bottom:12px;">
+            <span class="es">Piezas gráficas informativas provenientes de talleres virtuales para doctores.</span>
+            <span class="en">Informative graphic pieces from virtual workshops for doctors.</span>
+          </p>
+          <div class="gallery">
+            <img src="img/sinclair_graphic1.jpg" alt="Piezas gráficas Sinclair">
+            <img src="img/sinclair_graphic2.jpg" alt="Piezas gráficas Sinclair">
+            <img src="img/sinclair_graphic3.jpg" alt="Piezas gráficas Sinclair">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- IMLABS -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag">Imlabs · US Franchises</span>
+        <h3>Imlabs</h3>
+        <p class="meta"><span class="es">Contenido multi-marca a escala</span><span class="en">Multi-brand content at scale</span></p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">
+          <span class="es">Desarrollé las ideas y escribí el copy, luego envié los conceptos al equipo de diseño gráfico para su ejecución. Supervisé los resultados, compilé los entregables en el calendario de contenido, y envié el material final a corporativo para su aprobación, o al cliente directo de cada franquicia según el caso. También realicé el seguimiento mensual de KPIs y reportes de desempeño.</span>
+          <span class="en">I developed the ideas and wrote the copy, then sent the concepts to the graphic design team for execution. I oversaw the results, compiled deliverables into the content calendar, and sent the final material to corporate for approval, or to the direct client of each franchise as applicable. I also handled monthly KPI tracking & performance reporting.</span>
+        </p>
+        <p class="case-desc" style="margin-bottom:24px;"><strong><span class="es">Marcas:</span><span class="en">Brands:</span></strong> Papa John's, Orangetheory, Dairy Queen, Dickey's, Spenga</p>
+
+        <div class="sub-case">
+          <div class="sub-case-head"><h4>Spenga</h4></div>
+          <p class="missing-note">
+            <span class="es">Nota: faltan las piezas y captions de Spenga — súbelas cuando las tengas.</span>
+            <span class="en">Note: Spenga pieces and captions are still missing — upload them when ready.</span>
+          </p>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head"><h4>Orange Theory</h4></div>
+          <p class="missing-note">
+            <span class="es">Nota: faltan las piezas y captions de Orange Theory — súbelas cuando las tengas.</span>
+            <span class="en">Note: Orange Theory pieces and captions are still missing — upload them when ready.</span>
+          </p>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head"><h4>Dickey's</h4></div>
+          <div class="gallery">
+            <img src="img/dickeys_pieza_1.jpg" alt="Dickey's pieza 1">
+            <img src="img/dickeys_pieza_2.jpg" alt="Dickey's pieza 2">
+            <img src="img/dickeys_pieza_4.jpg" alt="Dickey's pieza 4">
+            <img src="img/dickeys_caption_3.jpg" alt="Dickey's caption 3">
+          </div>
+          <p class="missing-note">
+            <span class="es">Nota: faltan pieza 3 y los captions 1, 2 y 4 — súbelos cuando los tengas.</span>
+            <span class="en">Note: piece 3 and captions 1, 2, and 4 are still missing — upload them when ready.</span>
+          </p>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head"><h4>Papa John's</h4></div>
+          <p class="missing-note">
+            <span class="es">Nota: faltan las piezas y captions de Papa John's — súbelas cuando las tengas.</span>
+            <span class="en">Note: Papa John's pieces and captions are still missing — upload them when ready.</span>
+          </p>
+        </div>
+
+        <div class="sub-case">
+          <div class="sub-case-head"><h4>Dairy Queen</h4></div>
+          <div class="gallery">
+            <img src="img/dq_pieza_2.jpg" alt="Dairy Queen pieza 2">
+            <img src="img/dq_caption_1.jpg" alt="Dairy Queen caption 1">
+            <img src="img/dq_caption_2.jpg" alt="Dairy Queen caption 2">
+            <img src="img/dq_caption_3.jpg" alt="Dairy Queen caption 3">
+          </div>
+          <p class="missing-note">
+            <span class="es">Nota: faltan pieza 1 y pieza 3 — súbelas cuando las tengas.</span>
+            <span class="en">Note: piece 1 and piece 3 are still missing — upload them when ready.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FREELANCE -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag"><span class="es">Independiente</span><span class="en">Independent</span></span>
+        <h3><span class="es">Trabajo Freelance</span><span class="en">Freelance Work</span></h3>
+      </div>
+      <div class="case-body">
+        <div class="mini-cases">
+          <div class="mini-case">
+            <div>
+              <span class="mini-tag"><span class="es">Freelance · Restaurante</span><span class="en">Freelance · Restaurant</span></span>
+              <h3>La Quinta Copa</h3>
+              <p class="desc">
+                <span class="es">Restaurante campestre tipo gastrobar en San Francisco, Cundinamarca, recién trasladado desde Bogotá. Necesitaba visibilidad en su nueva ubicación y posicionarse como uno de los mejores gastrobares de la región.</span>
+                <span class="en">A countryside gastrobar-style restaurant in San Francisco, Cundinamarca, recently relocated from Bogotá. It needed visibility in its new location and to position itself as one of the region's top gastrobars.</span>
+              </p>
+              <ul>
+                <li><span class="es">Tono cálido y cercano; traducción digital de su estética vintage</span><span class="en">Warm, close tone; digital translation of its vintage aesthetic</span></li>
+                <li><span class="es">Reels de proceso: cócteles, masa de pizza, origen de los licores</span><span class="en">Process reels: cocktails, pizza dough, spirit origins</span></li>
+              </ul>
+              <div class="reel-links">
+                <a href="https://www.instagram.com/reel/CQwcBjwpuoK/" target="_blank">▶ Reel 1</a>
+                <a href="https://www.instagram.com/reel/CQeD5YuJKpH/" target="_blank">▶ Reel 2</a>
+              </div>
+            </div>
+            <div class="mini-gallery">
+              <img src="img/quintacopa_hero.jpg" alt="La Quinta Copa">
+              <img src="img/quinta_new1.jpg" alt="La Quinta Copa">
+              <img src="img/quinta_new2.jpg" alt="La Quinta Copa">
+              <img src="img/quinta_new3.jpg" alt="La Quinta Copa">
+            </div>
+          </div>
+
+          <div class="mini-case">
+            <div>
+              <span class="mini-tag"><span class="es">Freelance · Retail de Consumo</span><span class="en">Freelance · Consumer Retail</span></span>
+              <h3>Domicilios de Carne</h3>
+              <p class="desc">
+                <span class="es">Página web de dos carnicerías de Bogotá (Marmoleo Carnes y Los Alpes). El objetivo: dar a conocer su sitio web mediante marketing de contenidos, convertir leads en clientes, y posicionar su línea de cortes premium.</span>
+                <span class="en">Website for two Bogotá butcher shops (Marmoleo Carnes and Los Alpes). The goal: build awareness of their website through content marketing, convert leads into customers, and position their premium cuts line.</span>
+              </p>
+              <ul>
+                <li><span class="es">Contenido educativo: tips parrilleros, cortes internacionales</span><span class="en">Educational content: grilling tips, international cuts</span></li>
+                <li><span class="es">Contenido informativo sobre el sistema de domicilios</span><span class="en">Informational content on the delivery system</span></li>
+              </ul>
+            </div>
+            <div class="mini-gallery">
+              <img src="img/domicilios_hero.jpg" alt="Domicilios de Carne">
+              <img src="img/domicilios_new1.jpg" alt="Domicilios de Carne">
+              <img src="img/domicilios_new2.jpg" alt="Domicilios de Carne">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EVENT MARKETING -->
+<section class="section section-alt" id="eventos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><span class="es">Proyectos</span><span class="en">Projects</span></span>
+      <h2>Event Marketing</h2>
+      <p class="sub">
+        <span class="es">Activaciones de marca y lanzamientos donde fui responsable por patrocinios, estrategia de comunicación o cobertura de contenido.</span>
+        <span class="en">Brand activations and launches where I was responsible for sponsorships, communication strategy, or content coverage.</span>
+      </p>
+    </div>
+
+    <!-- LANLUMA LAUNCH -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag">Sango Lab · Sinclair</span>
+        <h3>Lanluma Launch</h3>
+        <p class="meta"><span class="es">Producción audiovisual y cobertura de evento</span><span class="en">Audiovisual production & event coverage</span></p>
+      </div>
+      <div class="case-body">
+        <p class="case-desc">
+          <span class="es">Lanzamiento de producto de gran escala para Lanluma en Colombia, donde apoyé la campaña en diseño creativo, producción audiovisual y cobertura del evento, que contó con la presencia de alrededor de 100 doctores de la industria y speakers e invitados internacionales.</span>
+          <span class="en">A large-scale product launch for Lanluma in Colombia, where I supported the campaign in creative design, audiovisual production, and event coverage, which was attended by around 100 industry doctors and featured international speakers and guests.</span>
+        </p>
+
+        <p class="micro-title"><span class="es">Pre-lanzamiento</span><span class="en">Pre-Launch</span></p>
+        <div class="phase-grid" style="margin-bottom:20px;">
+          <div class="phase">
+            <ul>
+              <li><span class="es">Cobertura y documentación del evento</span><span class="en">Event coverage and documentation</span></li>
+              <li><span class="es">Compilación de video para redes sociales</span><span class="en">Video compilation for social media</span></li>
+              <li><span class="es">Proyección en vivo de aplicación en primer plano durante los eventos</span><span class="en">Live projection of close-up application during events</span></li>
+              <li><span class="es">Fotografía de antes y después</span><span class="en">Before and after photo making</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="reel-links" style="margin-bottom:22px;">
+          <a href="https://www.instagram.com/reel/C9iZ7KzBG5d/" target="_blank">▶ Pre-Launch: Dra. Beatriz Beltrán</a>
+          <a href="https://www.instagram.com/reel/C_tgCA7RrJz/" target="_blank">▶ Masterclass Dra. Beatriz Beltrán</a>
+        </div>
+
+        <p class="micro-title">Lanzamiento</p>
+        <div class="phase-grid" style="margin-bottom:20px;">
+          <div class="phase">
+            <ul>
+              <li><span class="es">Diseño de materiales para pantallas del evento</span><span class="en">Design of materials for event screens and displays</span></li>
+              <li><span class="es">Cobertura del evento para redes sociales</span><span class="en">Event coverage for social media</span></li>
+              <li><span class="es">Proyección en vivo de aplicación en primer plano</span><span class="en">Live projection of close-up application during event</span></li>
+              <li><span class="es">Fotografía de antes y después</span><span class="en">Before and after photo making</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="reel-links" style="margin-bottom:24px;">
+          <a href="https://www.instagram.com/reel/C9x_ihzBmXW/" target="_blank">▶ <span class="es">Compilado de la noche</span><span class="en">Launch night compilation</span></a>
+          <a href="https://www.instagram.com/reel/C-nYMPOhsae/" target="_blank">▶ <span class="es">Video de lanzamiento global</span><span class="en">Global launch video</span></a>
+          <a href="https://www.instagram.com/reel/C945I-ixOV0/" target="_blank">▶ Lanluma Launch 1</a>
+          <a href="https://www.instagram.com/reel/C-BO499h9Lr/" target="_blank">▶ Lanluma Launch 2</a>
+        </div>
+
+        <p class="missing-note" style="margin-bottom:20px;">
+          <span class="es">Nota: falta la foto "Lanluma Launch Doctores" debajo del título — súbela cuando la tengas.</span>
+          <span class="en">Note: the "Lanluma Launch Doctores" photo below the title is still missing — upload it when ready.</span>
+        </p>
+
+        <p class="micro-title">Credentials</p>
+        <div class="gallery" style="margin-bottom:20px;">
+          <img src="img/credencial_lanluma_1.jpg" alt="Credencial Lanluma 1">
+          <img src="img/credencial_lanluma_2.jpg" alt="Credencial Lanluma 2">
+        </div>
+        <p class="missing-note" style="margin-bottom:20px;">
+          <span class="es">Nota: faltan las fotos "Lanluma Launch 1, 2, 3" — súbelas cuando las tengas.</span>
+          <span class="en">Note: "Lanluma Launch 1, 2, 3" photos are still missing — upload them when ready.</span>
+        </p>
+
+        <p class="micro-title">Before and after pictures of live application</p>
+        <div class="gallery">
+          <img src="img/ba_lanluma_2.jpg" alt="Before/after Lanluma 2">
+          <img src="img/ba_lanluma_3.jpg" alt="Before/after Lanluma 3">
+        </div>
+        <p class="missing-note">
+          <span class="es">Nota: falta la foto "BA Lanluma 1" — súbela cuando la tengas.</span>
+          <span class="en">Note: "BA Lanluma 1" photo is still missing — upload it when ready.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- LA LOCA MARGARITA -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag"><span class="es">Coproducción · Obra teatral</span><span class="en">Co-production · Theater play</span></span>
+        <h3>La Loca Margarita</h3>
+        <p class="meta">San Francisco, Cundinamarca — Abril–Junio 2022</p>
+      </div>
+      <div class="result-band">
+        <div class="result-col" style="background:var(--ink);">
+          <h4>Objetivo</h4>
+          <p><span class="es">Promocionar la asistencia a la obra de teatro "La Loca Margarita" y vincular entes privados del municipio que se beneficiarían del tráfico que traería la obra, con una meta de 400 asistentes en dos funciones.</span><span class="en">Promote attendance for the theater play "La Loca Margarita" and engage local private businesses that would benefit from the foot traffic the play would bring, with a goal of 400 attendees across two performances.</span></p>
+          <div class="stat-row">
+            <div class="stat"><div class="num">400+</div><div class="label"><span class="es">asistentes (meta cumplida)</span><span class="en">attendees (goal met)</span></div></div>
+            <div class="stat"><div class="num">10</div><div class="label"><span class="es">patrocinadores conseguidos</span><span class="en">sponsors secured</span></div></div>
+          </div>
+        </div>
+        <div class="result-col" style="background:var(--ink-2);">
+          <h4><span class="es">Iniciativas</span><span class="en">Initiatives</span></h4>
+          <ul>
+            <li><span class="es">Reels colaborativos con cada patrocinador, mostrando su negocio junto a la fecha de la obra</span><span class="en">Collaborative reels with each sponsor, showcasing their business alongside the play's date</span></li>
+            <li><span class="es">Alianza con influencers locales para un llamado masivo en redes</span><span class="en">Partnership with local influencers for a mass social media call-to-action</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="reel-links" style="margin-bottom:18px;">
+          <a href="https://www.instagram.com/reel/CdWyR9tpGWa/" target="_blank">▶ Reel 1</a>
+          <a href="https://www.instagram.com/reel/CdgIKGdjGqa/" target="_blank">▶ Reel 2</a>
+          <a href="https://www.instagram.com/reel/Cdb04H7JJRW/" target="_blank">▶ Reel 3</a>
+          <a href="https://www.instagram.com/reel/CeRWxtHuaHm/" target="_blank">▶ <span class="es">Patrocinadores 1</span><span class="en">Sponsors 1</span></a>
+          <a href="https://www.instagram.com/reel/CeJlKT3Dpfv/" target="_blank">▶ <span class="es">Patrocinadores 2</span><span class="en">Sponsors 2</span></a>
+        </div>
+        <div class="gallery">
+          <img src="img/loca_margarita_poster.jpg" alt="La Loca Margarita">
+          <img src="img/loca_margarita_photo1.jpg" alt="La Loca Margarita">
+          <img src="img/loca_margarita_photo2.jpg" alt="La Loca Margarita">
+          <img src="img/loca_margarita_photo3.jpg" alt="La Loca Margarita">
+        </div>
+      </div>
+    </div>
+
+    <!-- EL GATO AL CUADRADO -->
+    <div class="case">
+      <div class="case-band">
+        <span class="tag"><span class="es">Marketing Partner</span><span class="en">Marketing Partner</span></span>
+        <h3>El Gato al Cuadrado</h3>
+        <p class="meta">San Francisco, Cundinamarca — Ago 2021 – Feb 2023</p>
+      </div>
+      <div class="result-band">
+        <div class="result-col" style="background:var(--ink);">
+          <h4>Objetivo</h4>
+          <p>
+            <span class="es">Me uní como partner a este café-bar ya establecido y lideré la transformación de su estrategia de marca y comunicación, posicionándolo como un punto de encuentro querido por la comunidad local.</span>
+            <span class="en">I joined as a partner in this already-established café-bar and led the transformation of its brand and communication strategy, positioning it as a beloved community gathering spot.</span>
+          </p>
+          <div class="stat-row">
+            <div class="stat"><div class="num">100–150</div><div class="label"><span class="es">asistentes por evento</span><span class="en">attendees per event</span></div></div>
+          </div>
+        </div>
+        <div class="result-col" style="background:var(--ink-2);">
+          <h4><span class="es">Iniciativas</span><span class="en">Initiatives</span></h4>
+          <ul>
+            <li><span class="es">Tomé el control de la comunicación en redes sociales y WhatsApp, sin estrategia previa</span><span class="en">Took ownership of communication across social media and WhatsApp, previously without a strategy</span></li>
+            <li><span class="es">Creé un canal de YouTube con entrevistas a miembros de la comunidad</span><span class="en">Created a YouTube channel featuring interviews with community members</span></li>
+            <li><span class="es">Diseñé una estrategia de eventos y talleres para atraer nuevos clientes</span><span class="en">Designed an events and workshops strategy to attract new customers</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="gallery">
+          <img src="img/gato_hero.jpg" alt="El Gato al Cuadrado">
+          <img src="img/gato_grid.jpg" alt="El Gato al Cuadrado content">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot-top">
+      <h2><span class="es">Construyamos algo juntos.</span><span class="en">Let's build something together.</span></h2>
+      <div class="foot-contacts">
+        <a href="mailto:aleja.q2097@gmail.com">aleja.q2097@gmail.com</a>
+        <a href="tel:+573004584878">+57 300 458 4878</a>
+        <a href="https://www.linkedin.com/in/alejandra-velosa-quete-marketing-strategyst/" target="_blank">LinkedIn →</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Alejandra Velosa Quete © 2026</span>
+      <span><span class="es">Bogotá · Barranquilla · Hamburgo</span><span class="en">Bogotá · Barranquilla · Hamburg</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.body.classList.toggle('lang-en', lang==='en');
+    document.getElementById('btn-es').classList.toggle('active', lang==='es');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
+</html>
