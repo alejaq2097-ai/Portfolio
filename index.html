@@ -102,8 +102,7 @@
   .intl-text .loc{font-size:13px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; display:block;}
   .intl-text p{font-size:16px; line-height:1.7; margin-bottom:16px; color:#3a352c;}
   .intl-imgs{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .intl-imgs img{border-radius:4px; object-fit:cover; height:230px; width:100%;}
-  .intl-imgs img:first-child{grid-row:span 2; height:100%;}
+  .intl-imgs img{border-radius:4px; object-fit:cover; height:300px; width:100%;}
 
   /* CASE BLOCK */
   .case{border-radius:6px; overflow:hidden; margin-bottom:64px; border:1px solid var(--line);}
@@ -139,6 +138,21 @@
   .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:8px;}
   .gallery img{border-radius:4px; height:170px; width:100%; object-fit:cover; border:1px solid var(--line);}
   .gallery-caption{font-size:12px; color:var(--muted); margin-top:6px;}
+
+  /* size/behavior variants for specific galleries */
+  .logo-gallery{grid-template-columns:repeat(auto-fit,minmax(120px,150px));}
+  .logo-gallery img{height:220px; object-fit:contain; background:#fff;}
+
+  .wide-gallery{grid-template-columns:1fr; max-width:480px;}
+  .wide-gallery img{height:260px; object-fit:contain; background:#fff;}
+
+  .gallery-hero img{height:380px; object-fit:cover; object-position:top;}
+
+  .gallery-contain-lg img{height:300px; object-fit:contain; background:#fff;}
+
+  .gallery-lg img{height:300px; object-fit:cover;}
+
+  .gallery-square img{aspect-ratio:1/1; height:auto; object-fit:cover;}
 
   .reel-links{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 6px;}
   .reel-links a{
@@ -246,7 +260,7 @@
         <span class="es">Hola, soy <strong>Alejandra Velosa</strong>. Tengo <strong>más de 3 años de experiencia</strong> en creación de contenido y estrategia; transformo ideas de marca en contenido claro y atractivo que conecta con las audiencias. Ayudo a las empresas a comunicarse de forma más efectiva con sus clientes, construyendo conexiones más fuertes a través de la comunicación estratégica. También quiero contarte sobre mi experiencia reciente en Alemania.</span>
         <span class="en">Hi, I'm <strong>Alejandra Velosa</strong>. I have <strong>more than 3 years of experience</strong> in content creation and strategy — I transform brand ideas into clear, engaging content that resonates with audiences. I help companies communicate more effectively with their customers, building stronger connections through strategic communication. I want to tell you also about my recent experience in Germany.</span>
       </p>
-      <img src="img/About me.png" alt="About me" style="border-radius:6px; width:100%; object-fit:cover;">
+      <img src="img/About me.png" alt="About me" style="border-radius:6px; width:100%; height:300px; object-fit:cover;">
     </div>
 
     <div class="intl-grid">
@@ -443,7 +457,7 @@
         </div>
 
         <p class="block-title">Brand Identity</p>
-        <div class="gallery">
+        <div class="gallery logo-gallery">
           <img src="img/Logo Blanco.jpg" alt="JHD brand identity">
           <img src="img/Logo Verde.jpg" alt="JHD brand identity">
         </div>
@@ -499,7 +513,7 @@
         </div>
 
         <p class="block-title">LinkedIn Corporate Profiles</p>
-        <div class="gallery">
+        <div class="gallery wide-gallery">
           <img src="img/JHD LinkedIn Corporate Profile.jpg" alt="JHD LinkedIn corporate profile">
         </div>
       </div>
@@ -717,10 +731,6 @@
               </div>
             </div>
             <div class="mini-gallery">
-              <img src="img/quintacopa_hero.jpg" alt="La Quinta Copa">
-              <img src="img/quinta_new1.jpg" alt="La Quinta Copa">
-              <img src="img/quinta_new2.jpg" alt="La Quinta Copa">
-              <img src="img/quinta_new3.jpg" alt="La Quinta Copa">
               <img src="img/La 5 Copa 1.jpg" alt="La Quinta Copa">
               <img src="img/La 5 Copa 2.jpg" alt="La Quinta Copa">
               <img src="img/La 5 Copa 3.jpg" alt="La Quinta Copa">
@@ -776,7 +786,7 @@
         <p class="meta"><span class="es">Producción audiovisual y cobertura de evento</span><span class="en">Audiovisual production & event coverage</span></p>
       </div>
       <div class="case-body">
-        <div class="gallery" style="margin-bottom:24px;">
+        <div class="gallery gallery-hero" style="margin-bottom:24px;">
           <img src="img/Lanluma Launch Doctores.jpg" alt="Lanluma Launch Doctores">
         </div>
         <p class="case-desc">
@@ -819,19 +829,19 @@
         </div>
 
         <p class="micro-title">Credentials</p>
-        <div class="gallery" style="margin-bottom:20px;">
+        <div class="gallery gallery-contain-lg" style="margin-bottom:20px;">
           <img src="img/Credencial Lanluma 1.jpg" alt="Credencial Lanluma 1">
           <img src="img/Credencial Lanluma 2.jpg" alt="Credencial Lanluma 2">
         </div>
 
-        <div class="gallery" style="margin-bottom:20px;">
+        <div class="gallery gallery-lg" style="margin-bottom:20px;">
           <img src="img/Lanluma Launch 1.jpg" alt="Lanluma Launch 1">
           <img src="img/Lanluma Launch 2.jpg" alt="Lanluma Launch 2">
           <img src="img/Lanluma Launch 3.jpg" alt="Lanluma Launch 3">
         </div>
 
         <p class="micro-title">Before and after pictures of live application</p>
-        <div class="gallery">
+        <div class="gallery gallery-square">
           <img src="img/BA Lanluma 1.jpg" alt="Before/after Lanluma 1">
           <img src="img/BA Lanluma 2.jpg" alt="Before/after Lanluma 2">
           <img src="img/BA Lanluma 3.jpg" alt="Before/after Lanluma 3">
