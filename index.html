@@ -102,7 +102,7 @@
   .intl-text .loc{font-size:13px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); margin-bottom:18px; display:block;}
   .intl-text p{font-size:16px; line-height:1.7; margin-bottom:16px; color:#3a352c;}
   .intl-imgs{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .intl-imgs img{border-radius:4px; object-fit:cover; height:300px; width:100%;}
+  .intl-imgs img{border-radius:4px; object-fit:cover; height:470px; width:100%;}
 
   /* CASE BLOCK */
   .case{border-radius:6px; overflow:hidden; margin-bottom:64px; border:1px solid var(--line);}
@@ -140,8 +140,15 @@
   .gallery-caption{font-size:12px; color:var(--muted); margin-top:6px;}
 
   /* size/behavior variants for specific galleries */
-  .logo-gallery{grid-template-columns:repeat(auto-fit,minmax(120px,150px));}
-  .logo-gallery img{height:220px; object-fit:contain; background:#fff;}
+  .logo-gallery{grid-template-columns:repeat(auto-fit,minmax(220px,260px));}
+  .logo-gallery img{aspect-ratio:1/1; height:auto; object-fit:contain; background:#fff;}
+
+  .gallery-portrait-lg{grid-template-columns:repeat(auto-fit,minmax(220px,260px));}
+  .gallery-portrait-lg img{height:470px; object-fit:cover;}
+
+  .gallery-portrait{grid-template-columns:repeat(3,1fr);}
+  .gallery-portrait img{height:380px; object-fit:contain; background:#fff;}
+  @media(max-width:640px){.gallery-portrait{grid-template-columns:repeat(2,1fr);}}
 
   .wide-gallery{grid-template-columns:1fr; max-width:480px;}
   .wide-gallery img{height:260px; object-fit:contain; background:#fff;}
@@ -260,7 +267,7 @@
         <span class="es">Hola, soy <strong>Alejandra Velosa</strong>. Tengo <strong>más de 3 años de experiencia</strong> en creación de contenido y estrategia; transformo ideas de marca en contenido claro y atractivo que conecta con las audiencias. Ayudo a las empresas a comunicarse de forma más efectiva con sus clientes, construyendo conexiones más fuertes a través de la comunicación estratégica. También quiero contarte sobre mi experiencia reciente en Alemania.</span>
         <span class="en">Hi, I'm <strong>Alejandra Velosa</strong>. I have <strong>more than 3 years of experience</strong> in content creation and strategy — I transform brand ideas into clear, engaging content that resonates with audiences. I help companies communicate more effectively with their customers, building stronger connections through strategic communication. I want to tell you also about my recent experience in Germany.</span>
       </p>
-      <img src="img/About me.png" alt="About me" style="border-radius:6px; width:100%; height:300px; object-fit:cover;">
+      <img src="img/About me.png" alt="About me" style="border-radius:6px; width:100%; height:470px; object-fit:cover;">
     </div>
 
     <div class="intl-grid">
@@ -546,7 +553,7 @@
           <span class="es">Creación de contenido para doctores y cirujanos: desde la captura y producción del contenido hasta el copywriting y la edición.</span>
           <span class="en">Content creation for doctors and surgeons: from content capture and production to copywriting and content editing.</span>
         </p>
-        <div class="gallery" style="max-width:260px; margin-bottom:8px;">
+        <div class="gallery gallery-portrait-lg" style="margin-bottom:8px;">
           <img src="img/Sango Lab Team.png" alt="Sango Lab Team">
         </div>
 
@@ -609,8 +616,8 @@
             <a href="https://www.instagram.com/reel/C-k23_2x8LD/" target="_blank">▶ Cooltech Masterclass</a>
             <a href="https://www.instagram.com/reel/C_A_L5sxnaE/" target="_blank">▶ Cooltech Masterclass 2</a>
           </div>
-          <div class="gallery" style="margin-top:14px;">
-            <img src="img/Sinclair Event Coverage.jpg" alt="Sinclair event coverage">
+          <div class="gallery gallery-portrait-lg" style="margin-top:14px;">
+            <img src="img/Sinclair Event Coverage 1.jpg" alt="Sinclair event coverage">
             <img src="img/Sinclair Event Coverage 2.jpg" alt="Sinclair event coverage">
           </div>
 
@@ -619,8 +626,8 @@
             <span class="es">Piezas gráficas informativas provenientes de talleres virtuales para doctores.</span>
             <span class="en">Informative graphic pieces from virtual workshops for doctors.</span>
           </p>
-          <div class="gallery">
-            <img src="img/Pieza Sinclair 1.jpg" alt="Piezas gráficas Sinclair">
+          <div class="gallery gallery-portrait-lg">
+            <img src="img/Pieza Sinclair 1.png" alt="Piezas gráficas Sinclair">
             <img src="img/Pieza Sinclair 2.jpg" alt="Piezas gráficas Sinclair">
             <img src="img/Pieza Sinclair 3.jpg" alt="Piezas gráficas Sinclair">
           </div>
@@ -646,10 +653,10 @@
         <div class="sub-case">
           <div class="sub-case-head"><h4>Spenga</h4></div>
           <div class="gallery">
-            <img src="img/Spenga Pieza 1.jpg" alt="Spenga pieza 1">
-            <img src="img/Spenga Caption 1.jpg" alt="Spenga caption 1">
-            <img src="img/Spenga Pieza 2.jpg" alt="Spenga pieza 2">
-            <img src="img/Spenga Caption 2.jpg" alt="Spenga caption 2">
+            <img src="img/Spenga Pieza 1.png" alt="Spenga pieza 1">
+            <img src="img/Spenga Caption 1.png" alt="Spenga caption 1">
+            <img src="img/Spenga Pieza 2.png" alt="Spenga pieza 2">
+            <img src="img/Spenga Caption 2.png" alt="Spenga caption 2">
           </div>
         </div>
 
@@ -661,7 +668,7 @@
             <img src="img/OTF Pieza 2.jpg" alt="Orange Theory pieza 2">
             <img src="img/OTF Caption 2.jpg" alt="Orange Theory caption 2">
             <img src="img/OTF Pieza 3.jpg" alt="Orange Theory pieza 3">
-            <img src="img/OTF Caption3.jpg" alt="Orange Theory caption 3">
+            <img src="img/OTF Caption 3.jpg" alt="Orange Theory caption 3">
           </div>
         </div>
 
@@ -730,7 +737,7 @@
                 <a href="https://www.instagram.com/reel/CQeD5YuJKpH/" target="_blank">▶ Reel 2</a>
               </div>
             </div>
-            <div class="mini-gallery">
+            <div class="mini-gallery gallery-portrait">
               <img src="img/La 5 Copa 1.jpg" alt="La Quinta Copa">
               <img src="img/La 5 Copa 2.jpg" alt="La Quinta Copa">
               <img src="img/La 5 Copa 3.jpg" alt="La Quinta Copa">
@@ -881,7 +888,7 @@
           <a href="https://www.instagram.com/reel/CeRWxtHuaHm/" target="_blank">▶ <span class="es">Patrocinadores 1</span><span class="en">Sponsors 1</span></a>
           <a href="https://www.instagram.com/reel/CeJlKT3Dpfv/" target="_blank">▶ <span class="es">Patrocinadores 2</span><span class="en">Sponsors 2</span></a>
         </div>
-        <div class="gallery">
+        <div class="gallery gallery-portrait">
           <img src="img/Loca Margarita 1.jpg" alt="La Loca Margarita">
           <img src="img/Loca Margarita 2.jpg" alt="La Loca Margarita">
           <img src="img/Loca Margarita 3.jpg" alt="La Loca Margarita">
@@ -918,7 +925,7 @@
         </div>
       </div>
       <div class="case-body">
-        <div class="gallery">
+        <div class="gallery gallery-portrait">
           <img src="img/El gato 1.jpg" alt="El Gato al Cuadrado">
           <img src="img/El gato 2.jpg" alt="El Gato al Cuadrado content">
         </div>
